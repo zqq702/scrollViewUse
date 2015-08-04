@@ -7,8 +7,15 @@
 //
 
 #import "ViewController.h"
+/**
+ *  @property(nonatomic)         CGPoint                      contentOffset;                  // default CGPointZero
+ @property(nonatomic)         CGSize                       contentSize;                    // default CGSizeZero
+ @property(nonatomic)         UIEdgeInsets                 contentInset;                   // default UIEdgeInsetsZero. add additional scroll area around content
 
+ */
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UIScrollView *srrollView;
+@property (weak, nonatomic) IBOutlet UIButton *bottomBtn;
 
 @end
 
@@ -16,7 +23,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.srrollView.scrollEnabled = YES;
+    self.srrollView.bounces = YES;
+    CGFloat H = self.bottomBtn.frame.size.height + 10;
+    //滚动范围
+    self.srrollView.contentSize = CGSizeMake(0, H);
+    //一开始的滚动位置
+    self.srrollView.contentOffset = CGPointMake(0, -64);
+    //设置额外的位置
+    self.srrollView.contentInset = UIEdgeInsetsMake(64, 0, 64, 0);
 }
 
 - (void)didReceiveMemoryWarning {
