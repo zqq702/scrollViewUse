@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  scrollViewUsese
+//
+//  Created by 张庆庆 on 15/8/4.
+//  Copyright (c) 2015年 Zqq. All rights reserved.
+//
+
+#ifndef scrollViewUsese_PrefixHeader_pch
+#define scrollViewUsese_PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
