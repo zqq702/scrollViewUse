@@ -25,7 +25,7 @@
     [super viewDidLoad];
     self.srrollView.scrollEnabled = YES;
     self.srrollView.bounces = YES;
-    CGFloat H = self.bottomBtn.frame.size.height + 10;
+    CGFloat H = self.bottomBtn.frame.origin.y + 100;
     //滚动范围
     self.srrollView.contentSize = CGSizeMake(0, H);
     //一开始的滚动位置
