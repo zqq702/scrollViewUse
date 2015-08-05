@@ -29,7 +29,7 @@
     //滚动范围
     self.srrollView.contentSize = CGSizeMake(0, H);
     //一开始的滚动位置
-    self.srrollView.contentOffset = CGPointMake(0, -64);
+    self.srrollView.contentOffset = CGPointMake(0, -100);
     //设置额外的位置
     self.srrollView.contentInset = UIEdgeInsetsMake(64, 0, 64, 0);
 }
