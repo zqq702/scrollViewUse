@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45E428C01B71F9BB00D5EF80 /* ZQQQueation.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E428BF1B71F9BB00D5EF80 /* ZQQQueation.m */; };
 		45F03C731B71DABB0055A366 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F03C721B71DABB0055A366 /* main.m */; };
 		45F03C761B71DABB0055A366 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F03C751B71DABB0055A366 /* AppDelegate.m */; };
 		45F03C791B71DABB0055A366 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F03C781B71DABB0055A366 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45E428BE1B71F9BB00D5EF80 /* ZQQQueation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQQQueation.h; sourceTree = "<group>"; };
+		45E428BF1B71F9BB00D5EF80 /* ZQQQueation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQQQueation.m; sourceTree = "<group>"; };
 		45F03C6D1B71DABB0055A366 /* guessImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = guessImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F03C711B71DABB0055A366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45F03C721B71DABB0055A366 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 				45F03C751B71DABB0055A366 /* AppDelegate.m */,
 				45F03C771B71DABB0055A366 /* ViewController.h */,
 				45F03C781B71DABB0055A366 /* ViewController.m */,
+				45E428BE1B71F9BB00D5EF80 /* ZQQQueation.h */,
+				45E428BF1B71F9BB00D5EF80 /* ZQQQueation.m */,
 				45F03C7A1B71DABB0055A366 /* Main.storyboard */,
 				45F03C7D1B71DABB0055A366 /* Images.xcassets */,
 				45F03C7F1B71DABB0055A366 /* LaunchScreen.xib */,
@@ -225,6 +230,7 @@
 			files = (
 				45F03C791B71DABB0055A366 /* ViewController.m in Sources */,
 				45F03C761B71DABB0055A366 /* AppDelegate.m in Sources */,
+				45E428C01B71F9BB00D5EF80 /* ZQQQueation.m in Sources */,
 				45F03C731B71DABB0055A366 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +426,7 @@
 				45F03C921B71DABB0055A366 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45F03C931B71DABB0055A366 /* Build configuration list for PBXNativeTarget "guessImageTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +435,7 @@
 				45F03C951B71DABB0055A366 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

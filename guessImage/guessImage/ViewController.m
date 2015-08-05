@@ -78,6 +78,8 @@
 
 - (IBAction)nextQuestionBtnClick:(id)sender {
 }
+
+//点击中间图片  实现放大缩小
 - (IBAction)centerImgBtnClick:(id)sender {
     if(self.coverView == nil){
         [self bigImgBtnclick];
