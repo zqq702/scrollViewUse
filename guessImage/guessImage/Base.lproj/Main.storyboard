@@ -35,7 +35,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="btn_right_highlighted"/>
                                 <connections>
-                                    <action selector="bigImgBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWD-BX-mEE"/>
+                                    <action selector="bigImgBtnclick" destination="BYZ-38-t0r" eventType="touchUpInside" id="m73-GR-fqJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XhD-U8-2Dr">
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="179" y="328"/>
+            <point key="canvasLocation" x="258" y="345"/>
         </scene>
     </scenes>
     <resources>

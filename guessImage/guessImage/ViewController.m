@@ -41,8 +41,8 @@
 - (IBAction)helpBtnClick:(id)sender {
 }
 
-//点击大图  图片放大和恢复
-- (IBAction)bigImgBtnClick:(id)sender {
+
+- (IBAction)bigImgBtnclick {
     self.frame = self.centerImgBtn.frame;
     UIButton *coverView = [[UIButton alloc]init];
     coverView.backgroundColor = [UIColor blackColor];
@@ -67,9 +67,11 @@
 }
 - (void)smallImage{
     [UIView animateWithDuration:2.0 animations:^{
-        //
         self.centerImgBtn.frame = self.frame;
+        self.coverView.alpha = 0.0;
+    } completion:^(BOOL finished) {
         [self.coverView removeFromSuperview];
+        self.coverView = nil;
     }];
 }
 
@@ -77,6 +79,11 @@
 - (IBAction)nextQuestionBtnClick:(id)sender {
 }
 - (IBAction)centerImgBtnClick:(id)sender {
+    if(self.coverView == nil){
+        [self bigImgBtnclick];
+    }else{
+        [self smallImage];
+    }
 }
 
 @end
