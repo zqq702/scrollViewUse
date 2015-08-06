@@ -25,7 +25,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="downloadBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Elg-Zl-Xzq"/>
+                        <action selector="downloadClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="lsm-Ov-cLK"/>
                     </connections>
                 </button>
             </subviews>

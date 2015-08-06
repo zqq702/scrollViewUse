@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "ZQQApp.h"
 #import "ZQQAppView.h"
-@interface ViewController ()
+@interface ViewController ()<ZQQAppViewDeleget>
 @property (nonatomic, strong) NSArray *apps;
 @end
 
@@ -30,6 +30,7 @@
     CGFloat margin = (self.view.frame.size.width - rowNum*w)/(rowNum+1);
     for (int i = 0; i < count; i++) {
         ZQQAppView *view = [ZQQAppView appViewWithDict:self.apps[i]];
+        view.deleget = self;
         //view.backgroundColor = [UIColor redColor];
         int row = i%rowNum;
         int rol = i/rowNum;
@@ -60,5 +61,36 @@
     }
     return _apps;
 }
+- (void)downloadBtnClick:(ZQQAppView *)appView {
 
+    //取出模型
+    ZQQApp *app = appView.app;
+    //显示下载成功的信息  UILable
+    UILabel *lable = [[UILabel alloc]init];
+    lable.backgroundColor = [UIColor blackColor];
+
+    lable.text = [NSString stringWithFormat:@"成功下载%@~",app.name];
+    lable.font = [UIFont systemFontOfSize:12.0];
+    lable.textAlignment = NSTextAlignmentCenter;
+    lable.textColor = [UIColor whiteColor];
+
+    //UILable 的frame
+    lable.frame = CGRectMake(120, 275, 150, 40);
+    lable.layer.cornerRadius = 5;
+    lable.clipsToBounds = YES;
+    lable.alpha = 0.0;
+    //添加
+    [self.view addSubview:lable];
+    //动画[UIImage anima^]
+    [UIView animateWithDuration:1 animations:^{
+        lable.alpha = 0.5;
+    }completion:^(BOOL finished) {
+        [UIView animateWithDuration:2 animations:^{
+            lable.alpha = 0.0;
+        }completion:^(BOOL finished) {
+            [lable removeFromSuperview];
+        }];
+    }];
+    
+}
 @end

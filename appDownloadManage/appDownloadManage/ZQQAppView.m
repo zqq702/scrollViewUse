@@ -15,14 +15,7 @@
 @end
 
 @implementation ZQQAppView
-- (IBAction)downloadBtnClick:(id)sender {
-    //让按钮失效
-    [sender isEnabled];
-    //显示下载成功的信息  UILable
-    //UILable 的frame
-    //添加
-    //动画[UIImage anima^]
-}
+
 
 + (instancetype)appViewWithDict:(ZQQApp *)app{
     //加载xib
@@ -36,5 +29,12 @@
     _app = app;
     self.iconView.image = [UIImage imageNamed:app.icon];
     self.nameView.text = app.name;
+}
+- (IBAction)downloadClick:(UIButton *)btn {
+    //按钮不可点击
+    btn.enabled = NO;
+    if ([self.deleget respondsToSelector:@selector(downloadBtnClick:)]) {
+        [self.deleget downloadBtnClick:self];
+    }
 }
 @end
