@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45E4297B1B734E4C00D5EF80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E4297A1B734E4C00D5EF80 /* main.m */; };
+		45E4297E1B734E4C00D5EF80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E4297D1B734E4C00D5EF80 /* AppDelegate.m */; };
+		45E429811B734E4C00D5EF80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E429801B734E4C00D5EF80 /* ViewController.m */; };
+		45E429841B734E4C00D5EF80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45E429821B734E4C00D5EF80 /* Main.storyboard */; };
+		45E429861B734E4C00D5EF80 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E429851B734E4C00D5EF80 /* Images.xcassets */; };
+		45E429891B734E4C00D5EF80 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45E429871B734E4C00D5EF80 /* LaunchScreen.xib */; };
+		45E429951B734E4C00D5EF80 /* herosDisplayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E429941B734E4C00D5EF80 /* herosDisplayTests.m */; };
+		45E4299F1B734E6000D5EF80 /* heros.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45E4299E1B734E6000D5EF80 /* heros.plist */; };
+		45E429A51B73506500D5EF80 /* ZQQHero.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E429A41B73506500D5EF80 /* ZQQHero.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45E4298F1B734E4C00D5EF80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45E4296D1B734E4C00D5EF80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45E429741B734E4C00D5EF80;
+			remoteInfo = herosDisplay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		45E429751B734E4C00D5EF80 /* herosDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = herosDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E429791B734E4C00D5EF80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45E4297A1B734E4C00D5EF80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		45E4297C1B734E4C00D5EF80 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		45E4297D1B734E4C00D5EF80 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		45E4297F1B734E4C00D5EF80 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		45E429801B734E4C00D5EF80 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		45E429831B734E4C00D5EF80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45E429851B734E4C00D5EF80 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		45E429881B734E4C00D5EF80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		45E4298E1B734E4C00D5EF80 /* herosDisplayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = herosDisplayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E429931B734E4C00D5EF80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45E429941B734E4C00D5EF80 /* herosDisplayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = herosDisplayTests.m; sourceTree = "<group>"; };
+		45E4299E1B734E6000D5EF80 /* heros.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = heros.plist; path = "../../../MJ/0330TablbeView/素材/LOL/heros.plist"; sourceTree = "<group>"; };
+		45E429A31B73506500D5EF80 /* ZQQHero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQQHero.h; sourceTree = "<group>"; };
+		45E429A41B73506500D5EF80 /* ZQQHero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQQHero.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45E429721B734E4C00D5EF80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45E4298B1B734E4C00D5EF80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45E4296C1B734E4C00D5EF80 = {
+			isa = PBXGroup;
+			children = (
+				45E429771B734E4C00D5EF80 /* herosDisplay */,
+				45E429911B734E4C00D5EF80 /* herosDisplayTests */,
+				45E429761B734E4C00D5EF80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45E429761B734E4C00D5EF80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45E429751B734E4C00D5EF80 /* herosDisplay.app */,
+				45E4298E1B734E4C00D5EF80 /* herosDisplayTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45E429771B734E4C00D5EF80 /* herosDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				45E429A21B73501800D5EF80 /* Controller */,
+				45E429A11B73501000D5EF80 /* View */,
+				45E429A01B73500300D5EF80 /* Model */,
+				45E4297C1B734E4C00D5EF80 /* AppDelegate.h */,
+				45E4297D1B734E4C00D5EF80 /* AppDelegate.m */,
+				45E429821B734E4C00D5EF80 /* Main.storyboard */,
+				45E429851B734E4C00D5EF80 /* Images.xcassets */,
+				45E429871B734E4C00D5EF80 /* LaunchScreen.xib */,
+				45E429781B734E4C00D5EF80 /* Supporting Files */,
+			);
+			path = herosDisplay;
+			sourceTree = "<group>";
+		};
+		45E429781B734E4C00D5EF80 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45E4299E1B734E6000D5EF80 /* heros.plist */,
+				45E429791B734E4C00D5EF80 /* Info.plist */,
+				45E4297A1B734E4C00D5EF80 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45E429911B734E4C00D5EF80 /* herosDisplayTests */ = {
+			isa = PBXGroup;
+			children = (
+				45E429941B734E4C00D5EF80 /* herosDisplayTests.m */,
+				45E429921B734E4C00D5EF80 /* Supporting Files */,
+			);
+			path = herosDisplayTests;
+			sourceTree = "<group>";
+		};
+		45E429921B734E4C00D5EF80 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45E429931B734E4C00D5EF80 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45E429A01B73500300D5EF80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45E429A31B73506500D5EF80 /* ZQQHero.h */,
+				45E429A41B73506500D5EF80 /* ZQQHero.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		45E429A11B73501000D5EF80 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		45E429A21B73501800D5EF80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45E4297F1B734E4C00D5EF80 /* ViewController.h */,
+				45E429801B734E4C00D5EF80 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45E429741B734E4C00D5EF80 /* herosDisplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45E429981B734E4C00D5EF80 /* Build configuration list for PBXNativeTarget "herosDisplay" */;
+			buildPhases = (
+				45E429711B734E4C00D5EF80 /* Sources */,
+				45E429721B734E4C00D5EF80 /* Frameworks */,
+				45E429731B734E4C00D5EF80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = herosDisplay;
+			productName = herosDisplay;
+			productReference = 45E429751B734E4C00D5EF80 /* herosDisplay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		45E4298D1B734E4C00D5EF80 /* herosDisplayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45E4299B1B734E4C00D5EF80 /* Build configuration list for PBXNativeTarget "herosDisplayTests" */;
+			buildPhases = (
+				45E4298A1B734E4C00D5EF80 /* Sources */,
+				45E4298B1B734E4C00D5EF80 /* Frameworks */,
+				45E4298C1B734E4C00D5EF80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45E429901B734E4C00D5EF80 /* PBXTargetDependency */,
+			);
+			name = herosDisplayTests;
+			productName = herosDisplayTests;
+			productReference = 45E4298E1B734E4C00D5EF80 /* herosDisplayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45E4296D1B734E4C00D5EF80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Zqq;
+				TargetAttributes = {
+					45E429741B734E4C00D5EF80 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					45E4298D1B734E4C00D5EF80 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 45E429741B734E4C00D5EF80;
+					};
+				};
+			};
+			buildConfigurationList = 45E429701B734E4C00D5EF80 /* Build configuration list for PBXProject "herosDisplay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45E4296C1B734E4C00D5EF80;
+			productRefGroup = 45E429761B734E4C00D5EF80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45E429741B734E4C00D5EF80 /* herosDisplay */,
+				45E4298D1B734E4C00D5EF80 /* herosDisplayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45E429731B734E4C00D5EF80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45E429841B734E4C00D5EF80 /* Main.storyboard in Resources */,
+				45E429891B734E4C00D5EF80 /* LaunchScreen.xib in Resources */,
+				45E4299F1B734E6000D5EF80 /* heros.plist in Resources */,
+				45E429861B734E4C00D5EF80 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45E4298C1B734E4C00D5EF80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45E429711B734E4C00D5EF80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45E429811B734E4C00D5EF80 /* ViewController.m in Sources */,
+				45E4297E1B734E4C00D5EF80 /* AppDelegate.m in Sources */,
+				45E429A51B73506500D5EF80 /* ZQQHero.m in Sources */,
+				45E4297B1B734E4C00D5EF80 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45E4298A1B734E4C00D5EF80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45E429951B734E4C00D5EF80 /* herosDisplayTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45E429901B734E4C00D5EF80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45E429741B734E4C00D5EF80 /* herosDisplay */;
+			targetProxy = 45E4298F1B734E4C00D5EF80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		45E429821B734E4C00D5EF80 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45E429831B734E4C00D5EF80 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		45E429871B734E4C00D5EF80 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45E429881B734E4C00D5EF80 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45E429961B734E4C00D5EF80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45E429971B734E4C00D5EF80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45E429991B734E4C00D5EF80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = herosDisplay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		45E4299A1B734E4C00D5EF80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = herosDisplay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		45E4299C1B734E4C00D5EF80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = herosDisplayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/herosDisplay.app/herosDisplay";
+			};
+			name = Debug;
+		};
+		45E4299D1B734E4C00D5EF80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = herosDisplayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/herosDisplay.app/herosDisplay";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45E429701B734E4C00D5EF80 /* Build configuration list for PBXProject "herosDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45E429961B734E4C00D5EF80 /* Debug */,
+				45E429971B734E4C00D5EF80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45E429981B734E4C00D5EF80 /* Build configuration list for PBXNativeTarget "herosDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45E429991B734E4C00D5EF80 /* Debug */,
+				45E4299A1B734E4C00D5EF80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		45E4299B1B734E4C00D5EF80 /* Build configuration list for PBXNativeTarget "herosDisplayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45E4299C1B734E4C00D5EF80 /* Debug */,
+				45E4299D1B734E4C00D5EF80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45E4296D1B734E4C00D5EF80 /* Project object */;
+}
