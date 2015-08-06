@@ -49,7 +49,7 @@
 //添加定时器
 - (void)addTimer{
     self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];//repeats 重复
-    //定时事件家人程序运行循环  可实现暂停启用的功能
+    //定时事件加入程序运行循环  可实现暂停启用的功能
     [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 //移除定时器
