@@ -75,7 +75,21 @@
     }
 }
 
+
 - (IBAction)tipBtnClick:(id)sender {
+    //点击提示  输出第一个字  扣100
+    for (UIButton *answerBtn in self.answerView.subviews) {
+        [self answerClick:answerBtn];
+    }
+    ZQQQueation *question = self.questions[self.index];
+    NSString *firstAnswer = [question.answer substringToIndex:1];
+    for (UIButton *optionBtn in self.optionView.subviews) {
+        if ([optionBtn.currentTitle isEqualToString:firstAnswer]) {
+            [self optionClick:optionBtn];
+            break;
+        }
+    }
+    [self addScore:-100];
 }
 - (IBAction)helpBtnClick:(id)sender {
 }
@@ -118,9 +132,19 @@
 
 //点击下一题
 - (IBAction)nextQuestionBtnClick:(id)sender {
+    self.optionView.userInteractionEnabled = YES;
     //最后一题
     if (self.index == self.questions.count -1) {
-        UIActionSheet *sheet = [[UIActionSheet alloc]initWithTitle:@"恭喜答题成功" delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:@"确定" otherButtonTitles:@"其他", nil];
+//        NSInteger scroe =  self.iconBtn.titleLabel.text;
+        int score = [self.iconBtn titleForState:UIControlStateNormal].intValue;
+        NSString *str = [NSString string];
+        if (score >= 14800) {
+            str = @"恭喜你闯关成功~";
+
+        }else{
+            str = @"很遗憾闯关失败了~";
+        }
+        UIActionSheet *sheet = [[UIActionSheet alloc]initWithTitle:str delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:@"确定" otherButtonTitles:@"其他", nil];
         [sheet showInView:self.view];
         return;
     }
@@ -129,10 +153,11 @@
     ZQQQueation *question = self.questions[self.index];
     //设置控件数据
     [self settingData:question];
-    //添加正确答案按钮
-    [self addAnswerBtn:question];
+
     //添加带选项按钮
     [self addOptionBtn:question];
+    //添加正确答案按钮
+    [self addAnswerBtn:question];
 }
 
 
@@ -165,6 +190,20 @@
 }
 //监听按钮点击
 - (void)answerClick:(UIButton *)answerBtn{
+    //让待选按钮能够被点击
+    self.optionView.userInteractionEnabled= YES;
+    //让答案按钮文字对应的待选按钮显示出来(hidden = NO)
+    for (UIButton *optionBtn in self.optionView.subviews) {
+        if ([optionBtn.currentTitle isEqualToString:answerBtn.currentTitle]&&optionBtn.hidden == YES) {
+            optionBtn.hidden = NO;
+        }
+    }
+    //让被点击答案按钮文zi消失
+    [answerBtn setTitle:nil forState:UIControlStateNormal];
+    //让所有的答案按钮变为黑色
+    for (answerBtn in self.answerView.subviews) {
+        [answerBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    }
 }
 
 
@@ -204,7 +243,66 @@
 }
 //监听待选按钮点击
 - (void)optionClick:(UIButton *)optionBtn{
+    //让被点击的按钮消失
+    optionBtn.hidden = YES;
+    //显示文字到答案按钮
+    for (UIButton *answerBtn in self.answerView.subviews) {
+        //判断按钮是否有文字
+        NSString *answerTitle = [answerBtn titleForState:UIControlStateNormal];
+        if (answerTitle.length == 0) {
+            //没有字  添加点击的文字
+            NSString *optionTitle = [optionBtn titleForState:UIControlStateNormal];
+            [answerBtn setTitle:optionTitle forState:UIControlStateNormal];
+            break;
+        }
+    }
+    //检测答案是否填满
+    BOOL full = YES;
+    //存储点击添加答案临时可变字符串
+    NSMutableString *tempAnswerTitle = [NSMutableString string];
+    for (UIButton *answerBtn in self.answerView.subviews) {
+        //判断按钮是否有文字
+        NSString *answerTitle = [answerBtn titleForState:UIControlStateNormal];
+        if (answerTitle.length == 0) {
+            full = NO;
+        }
+        //拼接按钮文字
+        if (answerTitle) {
+            [tempAnswerTitle appendString:answerTitle];
+        }
+    }
+    //如果填满  判断
+    if (full) {
+        //让所有的按钮不能被点击
+        self.optionView.userInteractionEnabled = NO;
+        ZQQQueation *question = self.questions[self.index];
+        if ([tempAnswerTitle isEqualToString:question.answer]) {
+            for (UIButton *answerBtn in self.answerView.subviews) {
+                [answerBtn setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+                 }
+                //答对加800
+                //0.5s后跳到下一题
+            [self addScore:800];
+            [self performSelector:@selector(nextQuestionBtnClick:) withObject:nil afterDelay:0.5];
+        }else{
+            for (UIButton *answerBtn in self.answerView.subviews) {
+                [answerBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+            }
+            [self addScore:-300];
+            [self performSelector:@selector(nextQuestionBtnClick:) withObject:nil afterDelay:0.5];
+        }
+    }
 }
+
+
+//加分
+- (void)addScore:(NSInteger)addScore{
+    int score = [self.iconBtn titleForState:UIControlStateNormal].intValue;
+    score += addScore;
+    [self.iconBtn setTitle:[NSString stringWithFormat:@"%d", score] forState:UIControlStateNormal];
+}
+
+
 //点击中间图片  实现放大缩小
 - (IBAction)centerImgBtnClick:(id)sender {
     if(self.coverView == nil){
