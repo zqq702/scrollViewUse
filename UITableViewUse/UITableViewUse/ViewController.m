@@ -22,6 +22,7 @@
     
 }
 #pragma mark 数据源方法
+
 //一共多少组
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
@@ -34,8 +35,9 @@
         return 4;
     }
 }
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
+
+//设置每行的内容
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle: UITableViewCellStyleDefault reuseIdentifier:nil];
@@ -62,5 +64,26 @@
     return cell;
 }
 
+
+//分组头
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSString *str = [NSString new];
+    if(section == 0){
+        str = @"第一组";
+    }else if(section == 1){
+        str = @"第二组";
+    }
+    return str;
+}
+//分组尾
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
+    NSString *str = [NSString new];
+    if(section == 0){
+        str = @"第一组三个";
+    }else if(section == 1){
+        str = @"第二组四个";
+    }
+    return str;
+}
 
 @end
